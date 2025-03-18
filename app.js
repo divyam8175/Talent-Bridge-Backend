@@ -26,6 +26,11 @@ app.use(fileUpload({
     tempFileDir: '/tmp/'
 }))
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully! 🚀");
+});
+
+
 app.use('/api/v1/user', userRoutes)
 app.use('/api/v1/application', applicationRoutes)
 app.use('/api/v1/vacancy', vacancyRoutes)
