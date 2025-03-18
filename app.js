@@ -24,7 +24,8 @@ app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: '/tmp/'
 }))
-const cors = require("cors");
+import cors from "cors"; // ✅ Correct for ESM
+
 
 app.use(cors({
   origin: "https://your-frontend-url.onrender.com", // Replace with your actual frontend Render URL
