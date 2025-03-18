@@ -25,6 +25,13 @@ app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: '/tmp/'
 }))
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://your-frontend-url.onrender.com", // Replace with your actual frontend Render URL
+  credentials: true
+}));
+
 
 app.get("/", (req, res) => {
   res.send("Backend is running successfully! 🚀");
