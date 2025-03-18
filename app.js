@@ -24,7 +24,6 @@ app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: '/tmp/'
 }))
-import cors from "cors"; // ✅ Correct for ESM
 
 
 app.use(cors({
