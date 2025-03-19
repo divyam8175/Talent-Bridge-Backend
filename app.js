@@ -12,10 +12,12 @@ import { errorMiddleware } from './middlewares/error.js'
 const app = express()
 dotenv.config({path:'./config/config.env'})
 
-app.use(cors({
-    origin: "https://talent-bridge-frontend.onrender.com", // Replace with your actual frontend Render URL
-    credentials: true
-  }));
+const corsOptions = {
+  origin: 'https://talent-bridge-frontend.onrender.com', // update with your actual frontend URL
+  credentials: true, // if you need to send cookies/authorization headers
+};
+
+app.use(cors(corsOptions));
 
 app.use(cookieParser())
 app.use(express.json())
