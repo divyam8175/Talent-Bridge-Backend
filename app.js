@@ -13,11 +13,11 @@ const app = express()
 dotenv.config({path:'./config/config.env'})
 
 const corsOptions = {
-  origin: 'https://talent-bridge-frontend.onrender.com', // update with your actual frontend URL
-  credentials: true, // if you need to send cookies/authorization headers
+  origin: process.env.FRONTEND_URL, // This will now be the actual frontend URL.
+  credentials: true,
 };
-
 app.use(cors(corsOptions));
+
 
 app.use(cookieParser())
 app.use(express.json())
