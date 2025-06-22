@@ -29,7 +29,7 @@ app.use(fileUpload({
 
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Replace with your actual frontend Render URL
+  origin: 'https://talent-bridge-frontend.onrender.com', // Replace with your actual frontend Render URL
   credentials: true
 }));
 
