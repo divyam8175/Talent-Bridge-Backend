@@ -12,11 +12,11 @@ import { errorMiddleware } from './middlewares/error.js'
 const app = express()
 dotenv.config({path:'./config/config.env'})
 
-const corsOptions = {
-  origin: process.env.FRONTEND_URL, // This will now be the actual frontend URL.
-  credentials: true,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: process.env.FRONTEND_URL, // This will now be the actual frontend URL.
+//   credentials: true,
+// };
+// app.use(cors());
 
 
 app.use(cookieParser())
@@ -29,7 +29,7 @@ app.use(fileUpload({
 
 
 app.use(cors({
-  origin: "https://talent-bridge-frontend.onrender.com", // Replace with your actual frontend Render URL
+  origin: 'http://localhost:5173', // Replace with your actual frontend Render URL
   credentials: true
 }));
 
